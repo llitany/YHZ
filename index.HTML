@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>my best friend 余恒之生日快乐！</title>
+
+    <link rel="stylesheet" href="css/style2.css" />
+    <style></style>
+  </head>
+  <body>
+    <audio id="audio_duration" autoplay>
+      <source src="mp3/birthday.mp3" />
+    </audio>
+    <bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh
+    ><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh><bokeh></bokeh>
+    <div class="mobile">最大化查看</div>
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+
+    <!-- <audio autoplay="autopaly">
+      <source src="mp3/birthday.mp3" type="audio/mp3" />
+    </audio> -->
+    <!--<h1>Feliz Cumpleaños Pratik!</h1>-->
+    <h2>HAPPY BIRTHDAY</h2>
+    <!--<span>🎉</span>-->
+    <div class="candle"><div id="flame" class="lit"></div></div>
+    <div class="cake"></div>
+    <div class="plate"></div>
+  </body>
+  <script>
+    var myVid = document.getElementById("audio_duration");
+    if (myVid != null) {
+      var duration;
+      myVid.load();
+      myVid.oncanplay = function () {
+        console.log("myVid.duration", myVid.duration);
+        console.log("myVid.duration*100", myVid.duration * 1000);
+        let time = null;
+        clearTimeout(time);
+        time = setTimeout(function () {
+          location.href = "photo_album.html";
+          clearTimeout(time);
+        }, myVid.duration * 1000);
+      };
+    }
+  </script>
+</html>
+
+
+
